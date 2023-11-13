@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "ded032ce-2d5e-4328-bd0d-ac91e93e2651",
+		"name": "DTT Back end assessment – Catering API",
+		"description": "The Postman collection for the DTT backend assessment test: Catering API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27304096"
+	},
+	"item": [
+		{
+			"name": "Update facility",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": 9,\r\n        \"name\": \"utrecht catering\",\r\n        \"creation_date\": \"2012-11-01\",\r\n        \"location\": {\r\n            \"id\": 9,\r\n            \"city\": \"utrecht\",\r\n            \"address\": \"straat 222\",\r\n            \"phone_number\": \"+31 2122 33\",\r\n            \"zip_code\": \"4225\",\r\n            \"country_code\": \"NL\"\r\n        },\r\n        \"tag_name\": [\"party\",\"catering\"]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/web_backend_test_catering_api/facility",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"web_backend_test_catering_api",
+						"facility"
+					]
+				},
+				"description": "Update an existing facility."
+			},
+			"response": []
+		},
+		{
+			"name": "Create facility",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        // \"id\": 1,\r\n        \"name\": \"catering services\",\r\n        \"creation_date\": \"2010-11-01\",\r\n        \"location\": {\r\n            // \"id\": 1,\r\n            \"city\": \"amsterdam\",\r\n            \"address\": \"straat 222\",\r\n            \"phone_number\": \"+31 2122 33\",\r\n            \"zip_code\": \"4225\",\r\n            \"country_code\": \"NL\"\r\n        },\r\n        \"tag_name\": [\"food\",\"party\"]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/web_backend_test_catering_api/facility",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"web_backend_test_catering_api",
+						"facility"
+					]
+				},
+				"description": "Create a new facility."
+			},
+			"response": []
+		},
+		{
+			"name": "Read facility",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/web_backend_test_catering_api/facility",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"web_backend_test_catering_api",
+						"facility"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "query",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "next_page",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "prev_page",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "Read all records or perform a search by ID or query.The limit of displayed results is set to two for testing cursor pagination."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete facility",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": 9,\r\n        \"name\": \"utrecht catering\",\r\n        \"creation_date\": \"2012-11-01\",\r\n        \"location\": {\r\n            \"id\": 9,\r\n            \"city\": \"utrecht\",\r\n            \"address\": \"straat 222\",\r\n            \"phone_number\": \"+31 2122 33\",\r\n            \"zip_code\": \"4225\",\r\n            \"country_code\": \"NL\"\r\n        },\r\n        \"tag_name\": [\"party\",\"catering\"]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/web_backend_test_catering_api/facility",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"web_backend_test_catering_api",
+						"facility"
+					]
+				},
+				"description": "Delete a facility."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost/web_backend_test_catering_api",
+			"type": "string"
+		}
+	]
+}
